@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "UXCam",
+        "repositoryURL": "https://github.com/uxcam/uxcam-ios",
+        "state": {
+          "branch": null,
+          "revision": "95c679794e721601f80ccf131be8a54e3346c3fb",
+          "version": "3.10.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
