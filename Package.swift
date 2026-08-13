@@ -1,8 +1,8 @@
 // swift-tools-version:5.3
 import PackageDescription
 
-let version = "3.10.0"
-let checksum = "684f78dd8efee43e6176ea64f2a6e232e73d9aaf9305b660882058bf18347633"
+let version = "3.10.1"
+let checksum = "cc3217e7db7047d38abdd5561cd4e5e4c1b7f813c67944bd7e50dc6715922525"
 let repoName = "uxcam-swiftui"
 
 let package = Package(
