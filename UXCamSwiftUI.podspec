@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'UXCamSwiftUI'
-  s.version = '3.10.1'
+  s.version = '3.10.2'
 
   s.summary = "UXCam SwiftUI wrapper SDK for iOS applications"
   s.description = <<-DESC
@@ -18,14 +18,14 @@ Pod::Spec.new do |s|
 
   # UXCam 1.10.0 is already published on CocoaPods with this immutable source.
   # Release staging switches future versions to the new Release asset URL.
-  s.source = { :http => "https://github.com/uxcam/uxcam-swiftui/releases/download/3.10.1/UXCamSwiftUI.xcframework.zip" }
+  s.source = { :http => "https://github.com/uxcam/uxcam-swiftui/releases/download/3.10.2/UXCamSwiftUI.xcframework.zip" }
   s.vendored_frameworks = 'UXCamSwiftUI.xcframework'
 
   s.static_framework = true
   s.requires_arc = true
 
 
-  s.dependency 'UXCam', '3.10.0'
+  s.dependency 'UXCam', '3.10.2'
   s.swift_version = '5.0'
 
 
