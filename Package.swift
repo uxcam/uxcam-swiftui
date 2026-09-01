@@ -1,8 +1,8 @@
 // swift-tools-version:5.3
 import PackageDescription
 
-let version = "3.10.2"
-let checksum = "7458c3bb25c8b84207da72886e1dc647cb498d1a20ec8305f1ef017b69b5abf4"
+let version = "3.10.3"
+let checksum = "f05e120cb9f998e1bd29bb51cb3b540e4024d5f64627bddfe47d7b681da2b556"
 let repoName = "uxcam-swiftui"
 
 let package = Package(
@@ -24,7 +24,7 @@ let package = Package(
 	
 	dependencies:
 	[
-		.package(name: "UXCam", url: "https://github.com/uxcam/uxcam-ios", .exact("3.10.2")),
+		.package(name: "UXCam", url: "https://github.com/uxcam/uxcam-ios", .exact("3.10.3")),
 	],
 	
     targets: 
