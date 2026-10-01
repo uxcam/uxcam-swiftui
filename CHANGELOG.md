@@ -5,7 +5,6 @@
 
 Version   | Changes
 ---------- | ----------
-3.11.1  | Updated iOS SDK version to 3.11.1. Fixed App Store rejection (ITMS-90685, ITMS-90206) of Swift Package Manager apps using 3.10.0–3.11.0, caused by a stub UXCam.framework nested inside UXCamSwiftUI.framework
 3.11.0  | Updated iOS SDK version to 3.11.0
 3.10.3  | Updated iOS SDK version to 3.10.3
 3.10.2  | Updated iOS SDK version to 3.10.2
