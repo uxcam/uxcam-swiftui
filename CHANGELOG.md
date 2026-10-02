@@ -5,6 +5,13 @@
 
 Version   | Changes
 ---------- | ----------
+3.11.0  | Updated iOS SDK version to 3.11.0
+3.10.3  | Updated iOS SDK version to 3.10.3
+3.10.2  | Updated iOS SDK version to 3.10.2
+3.10.1  | Updated iOS SDK version to 3.10.1
+3.10.0  | Updated iOS SDK version to 3.10.0
+1.10.0  | Updated iOS SDK version to 3.9.0
+1.0.9   | Updated iOS SDK version to 3.8.4
 1.0.8   | Updated iOS SDK version to 3.8.2
 1.0.7   | SwiftUI automatic screen tagging feature and fix for SDK build issue in Xcode versions less than 15.3
 1.0.6   | Updated iOS SDK version to 3.6.11
