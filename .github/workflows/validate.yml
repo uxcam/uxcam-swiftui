@@ -29,15 +29,20 @@ jobs:
       - name: Validate Package.swift
         run: swift package dump-package >/dev/null
 
-      - name: Lint podspec syntax
-        run: pod ipc spec UXCamSwiftUI.podspec >/dev/null
-
-      - name: Check manifest versions match
+      - name: Check the package version
         run: |
           package_version="$(sed -n 's/^let version = "\([^"]*\)".*$/\1/p' Package.swift)"
-          pod_version="$(sed -n "s/^[[:space:]]*s\.version[[:space:]]*=[[:space:]]*'\([^']*\)'.*$/\1/p" UXCamSwiftUI.podspec)"
-          if [[ -z "$package_version" || "$package_version" != "$pod_version" ]]; then
-            echo "::error::Package.swift ('$package_version') and UXCamSwiftUI.podspec ('$pod_version') versions differ"
+          if ! printf '%s' "$package_version" | grep -Eq '^[0-9]+\.[0-9]+\.[0-9]+$'; then
+            echo "::error::Invalid version in Package.swift: '$package_version'"
+            exit 1
+          fi
+
+      - name: Forbid CocoaPods manifests
+        run: |
+          forbidden="$(git ls-files | grep -E '(^|/)(Podfile(\.lock)?|[^/]+\.podspec(\.json)?)$' || true)"
+          if [[ -n "$forbidden" ]]; then
+            echo "::error::UXCamSwiftUI is distributed through Swift Package Manager only; CocoaPods manifests must not be tracked"
+            echo "$forbidden"
             exit 1
           fi
 

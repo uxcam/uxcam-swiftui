@@ -37,4 +37,17 @@ Then run `swift package resolve` and commit the updated `Package.resolved`.
 - Versions 3.10.0 and later are released from `uxcam-swiftui`.
 - Never include both package URLs in one dependency graph. They have different
   package identities but export the same `UXCamSwiftUI` product and module.
-- CocoaPods users do not need to make any migration change.
+- CocoaPods is no longer supported; see below.
+
+## Migrating from CocoaPods
+
+UXCamSwiftUI is no longer published to CocoaPods. The last published pod keeps
+working but receives no further releases. The `UXCamSwiftUI` module and API are
+the same, so application code does not change.
+
+1. Remove `pod 'UXCamSwiftUI'` (and any `pod 'UXCam'`) from your `Podfile`.
+2. Run `pod install` (or `pod deintegrate` if UXCam was your only pod).
+3. Add `https://github.com/uxcam/uxcam-swiftui` as a Swift package dependency
+   and link the `UXCamSwiftUI` product to the same application targets. It
+   brings the matching `UXCam` package with it.
+4. Build both a simulator and device destination.
