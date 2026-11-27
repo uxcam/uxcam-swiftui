@@ -3,6 +3,8 @@
 This package is the framework for the UXCam SwiftUI wrapper.
 Each release pins an exact version of the main UXCam framework ([uxcam-ios](https://github.com/uxcam/uxcam-ios)); see `Package.swift`.
 
+It is distributed through Swift Package Manager only: add `https://github.com/uxcam/uxcam-swiftui` as a package dependency and link the `UXCamSwiftUI` product. CocoaPods is no longer supported; existing pod users should follow [MIGRATION.md](MIGRATION.md#migrating-from-cocoapods).
+
 Internally it uses some of the ideas in the [Introspect](https://github.com/siteline/SwiftUI-Introspect.git) library, but that library itself is not included here.
 
 
